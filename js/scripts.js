@@ -1,5 +1,6 @@
 $(document).ready(function($) {
     "use strict";
+    $('.logo img').attr('src', $('.logo img').attr('data-src'));
 
     $(window).scroll(function () {
         if ($(document).scrollTop() > 10) {
