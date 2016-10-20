@@ -478,12 +478,12 @@ a.custom-button span {
 	top: 50%;
 	left: 30px;
 	transform: translate3d(0, -50%, 0);
-	border-radius: 30px;
+	border-radius: 20px;
 	overflow: hidden;
 }
 .logo img {
 	display:block;
-	/*width: 50px;*/
+	width: 40px;
 	height: 40px;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 	-khtml-opacity: 1;

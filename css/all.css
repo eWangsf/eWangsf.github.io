@@ -587,11 +587,15 @@ a.custom-button span {
 	position: absolute;
 	display: block;
 	top: 50%;
-	margin-top: -15px;
 	left: 30px;
+	transform: translate3d(0, -50%, 0);
+	border-radius: 20px;
+	overflow: hidden;
 }
 .logo img {
 	display:block;
+	width: 40px;
+	height: 40px;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 	-khtml-opacity: 1;
 	-moz-opacity: 1;
@@ -617,6 +621,7 @@ a.custom-button span {
 	text-align:center;
 	height:60px;
 }
+
 .navbar .nav > li {
 	float:none;
 	display:inline-block;
@@ -691,6 +696,25 @@ nav i.icon-basic-eye {
 	background-color: #fff;
     background-color: rgba(255,255,255,.9)
 }
+
+
+.navbar .nav li,
+.navbar .nav li a,
+.navbar .nav li a i,
+.navbar .nav li.nolink,
+.navbar .nav li.nolink a i{
+	color: #fff;
+}
+
+.lightnav-alt .nav li,
+.lightnav-alt .nav li a,
+.lightnav-alt .nav li a i,
+.lightnav-alt .nav li.nolink,
+.lightnav-alt .nav li.nolink a,
+.lightnav-alt .nav li.nolink a i {
+	color: #000;
+}
+
 @media (max-width: 1024px) {
 	.navbar-inner.lightnav-alt {
 		border-bottom: none;
