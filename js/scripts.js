@@ -2,6 +2,10 @@ $(document).ready(function($) {
     "use strict";
     $('.logo img').attr('src', $('.logo img').attr('data-src'));
 
+    if(window.location.pathname == '/') {
+    	$('#index').addClass('inhome');
+    }
+
     $(window).scroll(function () {
         if ($(document).scrollTop() > 10) {
             $(".lightnav .navbar-inner").addClass("lightnav-alt");

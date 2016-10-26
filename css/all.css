@@ -687,10 +687,7 @@ nav i.icon-basic-eye {
 	background-color: #fff;
 	background-color: rgba(255,255,255,.9);
 }
-.lightnav .navbar-inner.lightnav-alt .nav > li > a,
-.lightnav .navbar-inner.lightnav-alt .learnmore {
-	color: #151515;
-}
+
 /* Changes nav background color to white on scroll */
 .navbar-inner.lightnav-alt {
 	background-color: #fff;
@@ -698,30 +695,40 @@ nav i.icon-basic-eye {
 }
 
 
-.navbar .nav li,
-.navbar .nav li a,
-.navbar .nav li a i,
-.navbar .nav li.nolink,
-.navbar .nav li.nolink a i{
+.inhome .nav li,
+.inhome .nav li a,
+.inhome .nav li a i,
+.inhome .nav li.nolink,
+.inhome .nav li.nolink a,
+.inhome .nav li.nolink a i,
+.inhome .learnmore {
 	color: #fff;
 }
 
-.lightnav-alt .nav li,
-.lightnav-alt .nav li a,
-.lightnav-alt .nav li a i,
-.lightnav-alt .nav li.nolink,
-.lightnav-alt .nav li.nolink a,
-.lightnav-alt .nav li.nolink a i {
+.inhome .lightnav-alt .nav li,
+.inhome .lightnav-alt .nav li a,
+.inhome .lightnav-alt .nav li a i,
+.inhome .lightnav-alt .nav li.nolink,
+.inhome .lightnav-alt .nav li.nolink a,
+.inhome .lightnav-alt .nav li.nolink a i,
+.inhome .lightnav-alt .learnmore {
 	color: #000;
 }
 
 
-button.navbar-toggle[title='More'] .icon-bar {
+.inhome button.navbar-toggle[title='More'] .icon-bar {
 	background-color: #fff;
 }
 .lightnav-alt button.navbar-toggle[title='More'] .icon-bar {
 	background-color: #000;
 }
+
+
+/*.inhome .navbar-inner.lightnav-alt .nav > li > a,
+.inhome .navbar-inner.lightnav-alt .learnmore {
+	color: #fff;
+}
+*/
 
 @media (max-width: 1024px) {
 	.navbar-inner.lightnav-alt {
@@ -777,7 +784,7 @@ button.navbar-toggle[title='More'] .icon-bar {
 	padding-right: 74px;
 	top: 14px;
 	z-index: 1060;
-	color: #fff;
+	color: #151515;
 	font-family: 'Montserrat', "Open Sans", "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 1px;
