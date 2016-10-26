@@ -71,12 +71,7 @@ b, strong {
 	font-style: normal;
 	font-weight: 700;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
 	margin-top: 0;
     font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
 	font-weight: 400;
@@ -118,7 +113,6 @@ h6 span,
 h6 span,
 .navbar .nav > li > span {
 	font-family: 'Georgia', "Open Sans", "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
-
 	font-style: italic;
 	margin-left: 4px;
 	margin-right: 3px;
@@ -503,17 +497,17 @@ a.custom-button span {
 }
 .navbar {
 	position: fixed;
-	top:0;
+	top: 0;
 }
 .navbar .nav {
-	width:100%;
-	text-align:center;
-	height:60px;
+	width: 100%;
+	text-align: center;
+	height: 60px;
 }
 
 .navbar .nav > li {
-	float:none;
-	display:inline-block;
+	float: none;
+	display: inline-block;
 }
 .navbar .nav > li > span {
 	font-size: 12px
@@ -521,14 +515,14 @@ a.custom-button span {
 .navbar .nav > li a:hover {
 	background-color: transparent;
 }
-.nav>li>a:hover,
-.nav>li>a:focus {
+.nav > li > a:hover,
+.nav > li > a:focus {
 	background-color: transparent;
 }
 .navbar .nav > li > a {
 	display: block;
-	padding:0px 10px;
-	margin:23px 0px;
+	padding: 0px 10px;
+	margin: 23px 0px;
 	color: #151515;
 	font-family: 'Montserrat', "Open Sans", "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
 	text-transform: uppercase;
@@ -537,7 +531,7 @@ a.custom-button span {
 	font-weight: 400;
 	line-height: 14px;
 	text-shadow: none;
-	border-right:1px solid #aaa;
+	border-right: 1px solid #aaa;
 }
 .navbar .nav li.nolink {
 	font-family: 'Montserrat', "Open Sans", "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
@@ -582,8 +576,7 @@ nav i.icon-basic-eye {
 	background-color: #fff;
     background-color: rgba(255,255,255,.9)
 }
-
-
+/*
 .inhome .nav li,
 .inhome .nav li a,
 .inhome .nav li a i,
@@ -604,21 +597,13 @@ nav i.icon-basic-eye {
 	color: #000;
 }
 
-
 .inhome button.navbar-toggle[title='More'] .icon-bar {
 	background-color: #fff;
 }
 .lightnav-alt button.navbar-toggle[title='More'] .icon-bar {
 	background-color: #000;
 }
-
-
-/*.inhome .navbar-inner.lightnav-alt .nav > li > a,
-.inhome .navbar-inner.lightnav-alt .learnmore {
-	color: #fff;
-}
 */
-
 @media (max-width: 1024px) {
 	.navbar-inner.lightnav-alt {
 		border-bottom: none;
@@ -3386,6 +3371,32 @@ footer .social li {
 	margin: 0 0.15em;
 }
 
+.inhome .nav li,
+.inhome .nav li a,
+.inhome .nav li a i,
+.inhome .nav li.nolink,
+.inhome .nav li.nolink a,
+.inhome .nav li.nolink a i,
+.inhome .learnmore {
+	color: #fff;
+}
+
+.inhome .lightnav-alt .nav li,
+.inhome .lightnav-alt .nav li a,
+.inhome .lightnav-alt .nav li a i,
+.inhome .lightnav-alt .nav li.nolink,
+.inhome .lightnav-alt .nav li.nolink a,
+.inhome .lightnav-alt .nav li.nolink a i,
+.inhome .lightnav-alt .learnmore {
+	color: #000;
+}
+
+.inhome button.navbar-toggle[title='More'] .icon-bar {
+	background-color: #fff;
+}
+.lightnav-alt button.navbar-toggle[title='More'] .icon-bar {
+	background-color: #000;
+}
 
 
 

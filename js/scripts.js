@@ -2,7 +2,7 @@ $(document).ready(function($) {
     "use strict";
     $('.logo img').attr('src', $('.logo img').attr('data-src'));
 
-    if(window.location.pathname == '/') {
+    if(window.location.pathname == '/' || (/\/tag\/*/g).test(window.location.pathname)) {
     	$('#index').addClass('inhome');
     }
 
