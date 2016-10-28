@@ -1,10 +1,10 @@
 
 @font-face {font-family: "iconfont";
-  src: url('../fonts/iconfont.eot?t=1476942496'); /* IE9*/
-  src: url('../fonts/iconfont.eot?t=1476942496#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('../fonts/iconfont.woff?t=1476942496') format('woff'), /* chrome, firefox */
-  url('../fonts/iconfont.ttf?t=1476942496') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('../fonts/iconfont.svg?t=1476942496#iconfont') format('svg'); /* iOS 4.1- */
+  src: url('../fonts/iconfont.eot?t=1477543897'); /* IE9*/
+  src: url('../fonts/iconfont.eot?t=1477543897#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/iconfont.woff?t=1477543897') format('woff'), /* chrome, firefox */
+  url('../fonts/iconfont.ttf?t=1477543897') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../fonts/iconfont.svg?t=1477543897#iconfont') format('svg'); /* iOS 4.1- */
 }
 
 .iconfont {
@@ -15,7 +15,8 @@
   -webkit-text-stroke-width: 0.2px;
   -moz-osx-font-smoothing: grayscale;
 }
+.icon-mail:before { content: "\e7ba"; }
 .icon-github:before { content: "\e69f"; }
-.icon-wechat:before { content: "\e604"; }
 .icon-weibo:before { content: "\e619"; }
 .icon-zhihu:before { content: "\e829"; }
+.icon-wechat:before { content: "\e604"; }

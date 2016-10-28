@@ -3509,9 +3509,18 @@ footer .social li {
 	background-color: #000;
 }
 
-
-
-
+#intro .container > div:nth-child(2) a, 
+#intro .container > div:nth-child(2) a:hover, 
+#intro .container > div:nth-child(2) a:active, 
+#intro .container > div:nth-child(2) a:focus, 
+#intro .container > div:nth-child(2) a:visited, 
+#intro .container > div:nth-child(2) a:link {
+	/*padding: 0 5px;*/
+	color: #009a61;
+	/*background-color: #009a61;
+	border: 1px solid #ccc;
+	border-radius: 3px;*/
+}
 
 
 
