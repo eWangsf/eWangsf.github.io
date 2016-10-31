@@ -2330,6 +2330,7 @@ ul.page-nav i {
 #services .boxes .col-md-3,
 #services .boxes .col-md-6 {
 	padding: 15px;
+	text-align: center;
 }
 #services .boxes i {
 	font-size: 80px;
@@ -3509,25 +3510,18 @@ footer .social li {
 	background-color: #000;
 }
 
-#intro .container > div:nth-child(2) a, 
-#intro .container > div:nth-child(2) a:hover, 
-#intro .container > div:nth-child(2) a:active, 
-#intro .container > div:nth-child(2) a:focus, 
-#intro .container > div:nth-child(2) a:visited, 
-#intro .container > div:nth-child(2) a:link {
+.articlecontent a, 
+.articlecontent a:hover, 
+.articlecontent a:active, 
+.articlecontent a:focus, 
+.articlecontent a:visited, 
+.articlecontent a:link {
 	/*padding: 0 5px;*/
 	color: #009a61;
 	/*background-color: #009a61;
 	border: 1px solid #ccc;
 	border-radius: 3px;*/
 }
-
-
-
-
-
-
-
 
 
 
