@@ -184,7 +184,6 @@
 <li>可在图像质量不下降的情况下被放大  </li>
 </ul>
 <p>我们不仅可以用svg sprite避开css sprite在不同分辨率下的坑，还可以为svg sprite中的每个元素独立上色。<br><!-- ![colored-svg-sprite](http://ofovo4red.bkt.clouddn.com/svg-sprite.png) --><br><img src="svg-sprite.png" alt="colored-svg-sprite"></p>
-<!-- <img src="http://ofovo4red.bkt.clouddn.com/svg-sprite.png" alt="colored-svg-sprite" style="width: 650px;"/> -->
 <hr>
 <h2 id="手动生成svg-sprite"><a href="#手动生成svg-sprite" class="headerlink" title="手动生成svg sprite"></a>手动生成svg sprite</h2><p>svg中组织元素的标签有<code>&lt;defs&gt;，&lt;g&gt;，&lt;symbol&gt;，&lt;use&gt;</code></p>
 <ul>
@@ -193,7 +192,7 @@
 <li><code>&lt;symbol&gt;</code>用于定义可重复使用的符号，它定义的图形不会直接显示，除非用<code>&lt;use&gt;</code>引入。<strong><em>有preserveAspectRatio和viewBox属性</em></strong></li>
 <li>一般用法都是（<code>defs</code>+<code>g</code>） || <code>symbol</code></li>
 </ul>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;例子：<br>&nbsp;&nbsp;&nbsp;&nbsp;假如我们有几个<a href="http://ofovo4red.bkt.clouddn.com/github.svg" target="_blank" rel="external">github.svg</a>， <a href="http://ofovo4red.bkt.clouddn.com/weibo.svg" target="_blank" rel="external">weibo.svg</a>， <a href="http://ofovo4red.bkt.clouddn.com/wechat.svg" target="_blank" rel="external">wechat.svg</a>，<a href="http://ofovo4red.bkt.clouddn.com/zhihu.svg" target="_blank" rel="external">zhihu.svg</a>四个文件（这些文件可以从iconfont等网站很方便地获取.<br>&nbsp;&nbsp;&nbsp;&nbsp;我们可以手动新建一个<a href="http://ofovo4red.bkt.clouddn.com/sprite.svg" target="_blank" rel="external">sprite.svg</a>如下，文件中每个形状都被加上一个id，在需要引入的地方通过引用id引入图形。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;例子：<br>&nbsp;&nbsp;&nbsp;&nbsp;假如我们有几个<a href="github.svg">github.svg</a>， <a href="weibo.svg">weibo.svg</a>， <a href="wechat.svg">wechat.svg</a>，<a href="zhihu.svg">zhihu.svg</a>四个文件（这些文件可以从iconfont等网站很方便地获取.<br>&nbsp;&nbsp;&nbsp;&nbsp;我们可以手动新建一个<a href="sprite.svg">sprite.svg</a>如下，文件中每个形状都被加上一个id，在需要引入的地方通过引用id引入图形。</p>
 <pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;300&quot; height=&quot;300&quot;&gt;</div><div class="line">    &lt;symbol id=&quot;github&quot; viewBox=&quot;0 0 3000 3000&quot;&gt;</div><div class="line">        // github shape code</div><div class="line">    &lt;/symbol&gt;</div><div class="line">    &lt;symbol id=&quot;wechat&quot; viewBox=&quot;0 0 3000 3000&quot;&gt;</div><div class="line">        // wechat shape code</div><div class="line">    &lt;/symbol&gt;</div><div class="line">    &lt;symbol id=&quot;weibo&quot; viewBox=&quot;0 0 3000 3000&quot;&gt;</div><div class="line">        // weibo shape code</div><div class="line">    &lt;/symbol&gt;</div><div class="line">    &lt;symbol id=&quot;zhihu&quot; viewBox=&quot;0 0 3000 3000&quot;&gt;</div><div class="line">        // zhihu shape code</div><div class="line">    &lt;/symbol&gt;</div><div class="line">    &lt;use href=&quot;#wechat&quot; x=&quot;0&quot; y=&quot;0&quot;&gt;&lt;/use&gt;</div><div class="line">    &lt;use href=&quot;#weibo&quot; x=&quot;30&quot; y=&quot;0&quot;&gt;&lt;/use&gt;</div><div class="line">    &lt;use href=&quot;#github&quot; x=&quot;60&quot; y=&quot;0&quot;&gt;&lt;/use&gt;</div><div class="line">&lt;/svg&gt;</div></pre></td></tr></table></figure>
 </code></pre><p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>注意，文件中symbol的viewBox属性可改变原svg视窗大小。</strong></p>
 <hr>
@@ -204,7 +203,7 @@
 <li>初始文件github.svg, weibo.svg, wechat.svg, zhihu.svg, package.json, gruntfile.js，</li>
 <li><code>$ npm install</code></li>
 <li><code>$ grunt</code></li>
-<li>目录变成了这个样子：<br>&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://ofovo4red.bkt.clouddn.com/sprites.png" alt="grunt生成的svg sprites"><br>&nbsp;&nbsp;&nbsp;&nbsp;生成的带tag的svg就可以拿到页面上用啦</li>
+<li>目录变成了这个样子：<br>&nbsp;&nbsp;&nbsp;&nbsp;<img src="sprites.png" alt="grunt生成的svg sprites"><br>&nbsp;&nbsp;&nbsp;&nbsp;生成的带tag的svg就可以拿到页面上用啦</li>
 </ol>
 <p><strong>关于grunt配置中的output mode</strong></p>
 <ul>
@@ -214,8 +213,8 @@
 </ul>
 <h3 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h3><p>可以用图片的地方几乎都可以用svg，比如文档中的img和object元素、css中的背景图片之类的，可以通过在文件名之后加锚点的形式利用id引用svg中的某个部分。</p>
 <ul>
-<li><a href="http://ofovo4red.bkt.clouddn.com/sprites.zip" target="_blank" rel="external">源码.zip</a></li>
-<li><img src="http://ofovo4red.bkt.clouddn.com/grunt-sprite-use.png" alt="效果图"></li>
+<li><a href="sprites.zip">源码.zip</a></li>
+<li><img src="grunt-sprite-use.png" alt="效果图"></li>
 </ul>
 <hr>
 <p><strong><em>关于像素：</em></strong></p>
