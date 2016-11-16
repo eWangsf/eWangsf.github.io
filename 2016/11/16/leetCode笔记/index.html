@@ -8,7 +8,7 @@
 <!--<![endif]-->
 
 <head>
-    <title>eWangsf</title>
+    <title>leetCode笔记 | eWangsf</title>
     <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -143,43 +143,12 @@
         <!-- ============================ END Header & Logo bar =========================== -->
 <!-- ============================ END #sb-site Main Page Wrapper =========================== -->
 
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: rgba(0, 0, 0, 1);background-size: cover;">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2></h2>
-                        <p></p>
-                        
-                        <h2></h2>
-                        <p>每一个不曾起舞的日子都是对生命的辜负。</p>
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
-
-<div class="heightblock"></div>
-
-<!-- ============================ END Hero Image =========================== -->
-<!-- ============================ Content =========================== -->
-
+      
 <section id="intro">
     <div class="container">
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2016/11/16/leetCode笔记/">leetCode笔记</a></h3>
-                    <span>
-                        <span class="post-meta">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
     <time datetime="2016-11-16T06:21:23.000Z" itemprop="datePublished">
         2016-11-16
     </time>
@@ -191,178 +160,48 @@
         
     
 </span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        回文数
-“Determine whether an integer is a palindrome. Do this without extra space.”
-回文数指的是首尾对称，正着念反着念都一样的数字。
-不能用额外的空间，所以不能用string。
-
-解法一
-将数字整个反过来，如果和原来的数字相等则为回文数1234567891011121314class Solution &#123;    public:        bool
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2016/11/16/leetCode笔记/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
+                <h1>leetCode笔记</h1>
             </div>
         </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2016/11/15/points/">points</a></h3>
-                    <span>
-                        <span class="post-meta">
-    <time datetime="2016-11-15T08:56:15.000Z" itemprop="datePublished">
-        2016-11-15
-    </time>
-    
-        
-        | 
-            <a href='/tags/zaza/'>zaza</a>
-            
-        
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        
+        <div class="col-md-8 col-md-offset-2 articlecontent">
+      		<h2 id="回文数"><a href="#回文数" class="headerlink" title="回文数"></a>回文数</h2><ul>
+<li>“Determine whether an integer is a palindrome. Do this without extra space.”</li>
+<li>回文数指的是首尾对称，正着念反着念都一样的数字。</li>
+<li>不能用额外的空间，所以不能用string。</li>
+</ul>
+<h2 id="解法一"><a href="#解法一" class="headerlink" title="解法一"></a>解法一</h2><ul>
+<li>将数字整个反过来，如果和原来的数字相等则为回文数<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">class Solution &#123;</div><div class="line">    public:</div><div class="line">        bool isPalindrome(int x) &#123;</div><div class="line">            int a = x, r = 0;</div><div class="line">            if (a &lt; 0) return false;</div><div class="line">            for (;a;) &#123;</div><div class="line">                // 检测溢出</div><div class="line">                // if (a &lt; (INT_MAX - x % 10) / 10) return 0;  </div><div class="line">                r = r * 10 + a % 10;</div><div class="line">                a = a / 10;</div><div class="line">            &#125;</div><div class="line">            return r == x;</div><div class="line">        &#125;</div><div class="line">    &#125;;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="解法二"><a href="#解法二" class="headerlink" title="解法二"></a>解法二</h2><ul>
+<li>每次取数字的最高位和最低位，比比看是不是相等，再把这两位丢掉继续比剩下的，直到x为0;</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">class Solution &#123;</div><div class="line">    public:</div><div class="line">        bool isPalindrome(int x) &#123;</div><div class="line">            int a = x, h = 1;</div><div class="line">            if (a &lt; 0) return false;</div><div class="line">            while (a / h &gt;= 10) &#123;</div><div class="line">                h = h * 10;</div><div class="line">            &#125;</div><div class="line">            while (a &gt; 0) &#123;</div><div class="line">                if (a / h != a % 10) return false;</div><div class="line">                a = a % h;</div><div class="line">                a = a / 10;</div><div class="line">                h = h / 100;</div><div class="line">            &#125;</div><div class="line">            return true;</div><div class="line">        &#125;</div><div class="line">    &#125;;</div></pre></td></tr></table></figure>
+<h2 id="比较"><a href="#比较" class="headerlink" title="比较"></a>比较</h2><ul>
+<li>解法一：~150ms, 解法二: ~80ms</li>
+</ul>
 
-
-
-
-
-
-
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2016/11/15/points/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2016/11/10/面筋/">面筋</a></h3>
-                    <span>
-                        <span class="post-meta">
-    <time datetime="2016-11-10T02:53:37.000Z" itemprop="datePublished">
-        2016-11-10
-    </time>
-    
-        
-        | 
-            <a href='/tags/zaza/'>zaza</a>
-            
-        
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        简历
-简历参考 - 非技术岗
-
-
-面试
-前端面试中的常见的算法问题
-
-
-
-
-
-其他
-找实习八大技巧，你真的了解吗？- 苏莹子
-《Effective A》- 苏莹子
-
-
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2016/11/10/面筋/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2016/10/26/svg-sprite/">svg-sprite</a></h3>
-                    <span>
-                        <span class="post-meta">
-    <time datetime="2016-10-26T13:59:29.000Z" itemprop="datePublished">
-        2016-10-26
-    </time>
-    
-        
-        | 
-            <a href='/tags/zaza/'>zaza</a>
-            
-        
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        css spritecss sprite，也称css精灵/雪碧图，是一种处理网页图片的方式，它将网页中要用到的零散的图片整合到一张图片中，这样网页加载的时候只需要加载一张图片，然后通过定位(background-position)定位到图片中的某个需要用到的部分，就可以实现与单张图片相似的效果。这样处理网站要用到的图片可以：
-
-很多http请求，提高网页的性能，因为原来每张图片都要发起一个http请求去取，现在只要取一次啦！
-不用给每张
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2016/10/26/svg-sprite/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
         <nav class="pagination" role="pagination">
-          
-          
-        </nav>
+    
+    
+    <a class="pull-right" href="/2016/11/15/points/">
+        points →
+    </a>
+    
+</nav>
+
+        <!-- <div class="duoshuo">
+</div> -->
     </div>
 </section>
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>虽然还没想好写点什么，但是总觉得这里放句话比较和谐。</p>
-        </div>
-    </div>
-</section>
-<!-- ============================ END Content =========================== -->
+
+
+
+
+
 
       
 <!-- ============================ Footer =========================== -->
