@@ -169,14 +169,17 @@
 <li>回文数指的是首尾对称，正着念反着念都一样的数字。</li>
 <li>不能用额外的空间，所以不能用string。</li>
 </ul>
+<hr>
 <h2 id="解法一"><a href="#解法一" class="headerlink" title="解法一"></a>解法一</h2><ul>
 <li>将数字整个反过来，如果和原来的数字相等则为回文数<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">class Solution &#123;</div><div class="line">    public:</div><div class="line">        bool isPalindrome(int x) &#123;</div><div class="line">            int a = x, r = 0;</div><div class="line">            if (a &lt; 0) return false;</div><div class="line">            for (;a;) &#123;</div><div class="line">                // 检测溢出</div><div class="line">                // if (a &lt; (INT_MAX - x % 10) / 10) return 0;  </div><div class="line">                r = r * 10 + a % 10;</div><div class="line">                a = a / 10;</div><div class="line">            &#125;</div><div class="line">            return r == x;</div><div class="line">        &#125;</div><div class="line">    &#125;;</div></pre></td></tr></table></figure>
 </li>
 </ul>
+<hr>
 <h2 id="解法二"><a href="#解法二" class="headerlink" title="解法二"></a>解法二</h2><ul>
 <li>每次取数字的最高位和最低位，比比看是不是相等，再把这两位丢掉继续比剩下的，直到x为0;</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">class Solution &#123;</div><div class="line">    public:</div><div class="line">        bool isPalindrome(int x) &#123;</div><div class="line">            int a = x, h = 1;</div><div class="line">            if (a &lt; 0) return false;</div><div class="line">            while (a / h &gt;= 10) &#123;</div><div class="line">                h = h * 10;</div><div class="line">            &#125;</div><div class="line">            while (a &gt; 0) &#123;</div><div class="line">                if (a / h != a % 10) return false;</div><div class="line">                a = a % h;</div><div class="line">                a = a / 10;</div><div class="line">                h = h / 100;</div><div class="line">            &#125;</div><div class="line">            return true;</div><div class="line">        &#125;</div><div class="line">    &#125;;</div></pre></td></tr></table></figure>
+<hr>
 <h2 id="比较"><a href="#比较" class="headerlink" title="比较"></a>比较</h2><ul>
 <li>解法一：~150ms, 解法二: ~80ms</li>
 </ul>
