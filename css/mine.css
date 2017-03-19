@@ -25,7 +25,47 @@
 h4, h5, h6 {
     margin-top: 1.5em;
 }
+.mycode {
+    background: #f5f5f5;
+    border: 1px solid #eee;
+    border-radius: 10px;
+}
 
+.center {
+    text-align: center;
+}
+
+.gap {
+    display: inline-block; 
+}
+.gap-xs {
+    width: 20px;
+}
+.gap-sm {
+    width: 50px;
+}
+.gap-md {
+    width: 100px;
+}
+.gap-lg {
+    width: 200px;
+}
+
+.item {
+    display: inline-block;
+}
+.item-xs {
+    width: 80px;
+}
+.item-sm {
+    width: 150px;
+}
+.item-md {
+    width: 250px;
+}
+.item-lg {
+    width: 350px;
+}
 
 
 

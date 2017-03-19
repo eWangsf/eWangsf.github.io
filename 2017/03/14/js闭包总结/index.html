@@ -8,7 +8,7 @@
 <!--<![endif]-->
 
 <head>
-    <title>Archives | eWangsf</title>
+    <title>js闭包总结 | eWangsf</title>
     <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -144,125 +144,51 @@
 <!-- ============================ END #sb-site Main Page Wrapper =========================== -->
 
       
-
-
-
-<section id="services">
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2017/03/14/js闭包总结/">js闭包总结</a></h4>
-                            
-                            <p><time datetime="2017-03-14T01:59:17.000Z"><a href="/2017/03/14/js闭包总结/">2017-03-14</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2017/03/11/模块化/">模块化</a></h4>
-                            
-                            <p><time datetime="2017-03-11T06:06:45.000Z"><a href="/2017/03/11/模块化/">2017-03-11</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2017/02/16/关于变量/">关于变量</a></h4>
-                            
-                            <p><time datetime="2017-02-16T03:19:37.000Z"><a href="/2017/02/16/关于变量/">2017-02-16</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2017/02/16/继承/">继承</a></h4>
-                            
-                            <p><time datetime="2017-02-16T02:33:17.000Z"><a href="/2017/02/16/继承/">2017-02-16</a></time></p>
-                        </div>
-                    
-                        
-                            </div><div class="row boxes">
-                            
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2017/02/16/ajax-跨域/">ajax-跨域</a></h4>
-                            
-                            <p><time datetime="2017-02-16T01:57:19.000Z"><a href="/2017/02/16/ajax-跨域/">2017-02-16</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2017/02/14/http-vs-https/">http-vs-https</a></h4>
-                            
-                            <p><time datetime="2017-02-14T12:06:45.000Z"><a href="/2017/02/14/http-vs-https/">2017-02-14</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2017/02/14/奇技淫巧-css/">奇技淫巧-css</a></h4>
-                            
-                            <p><time datetime="2017-02-14T12:02:19.000Z"><a href="/2017/02/14/奇技淫巧-css/">2017-02-14</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/12/26/sublimetext-packagecontrol/">sublimetext-packagecontrol</a></h4>
-                            
-                            <p><time datetime="2016-12-26T15:22:22.000Z"><a href="/2016/12/26/sublimetext-packagecontrol/">2016-12-26</a></time></p>
-                        </div>
-                    
-                        
-                            </div><div class="row boxes">
-                            
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/12/26/sublimetext-packagecontrol/channel_v3/"></a></h4>
-                            
-                            <p><time datetime="2016-12-26T06:20:54.000Z"><a href="/2016/12/26/sublimetext-packagecontrol/channel_v3/">2016-12-26</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/11/20/LeetCode笔记-RomanToInteger/">LeetCode笔记-Roman&lt;--&gt;Integer</a></h4>
-                            
-                            <p><time datetime="2016-11-19T16:16:13.000Z"><a href="/2016/11/20/LeetCode笔记-RomanToInteger/">2016-11-20</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+    <time datetime="2017-03-14T01:59:17.000Z" itemprop="datePublished">
+        2017-03-14
+    </time>
+    
+        
+        | 
+            <a href='/tags/zaza/'>zaza</a>
+            
+        
+    
+</span>
+                <h1>js闭包总结</h1>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2 articlecontent">
+      		<p><a href="https://maxushuang.blog.ustc.edu.cn/?p=25" target="_blank" rel="external">javascript 闭包详解</a><br><a href="http">ECMA</a></p>
+<p>以上文章的延伸阅读：<br><a href="http://dmitrysoshnikov.com/ecmascript/chapter-5-functions/#question-about-surrounding-parentheses" target="_blank" rel="external">ECMA-262-3 in detail. Chapter 5. Functions. – Dmitry A. Soshnikov</a><br><a href="https://developer.mozilla.org/en/JavaScript/Reference/Functions_and_function_scope" target="_blank" rel="external">Functions and function scope – Mozilla Developer Network</a><br><a href="http://kangax.github.io/nfe/" target="_blank" rel="external">Named function expressions – Juriy “kangax” Zaytsev</a><br><a href="http://www.adequatelygood.com/JavaScript-Module-Pattern-In-Depth.html" target="_blank" rel="external">JavaScript Module Pattern: In-Depth – Ben Cherry</a><br><a href="http://skilldrick.co.uk/2011/04/closures-explained-with-javascript/" target="_blank" rel="external">Closures explained with JavaScript – Nick Morgan</a></p>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>虽然还没想好写点什么，但是总觉得这里放句话比较和谐。</p>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
+        <nav class="pagination" role="pagination">
+    
+    
+    <a class="pull-right" href="/2017/03/11/模块化/">
+        模块化 →
+    </a>
+    
+</nav>
+
+        <!-- <div class="duoshuo">
+</div> -->
     </div>
 </section>
+
+
+
+
+
+
       
 <!-- ============================ Footer =========================== -->
 
