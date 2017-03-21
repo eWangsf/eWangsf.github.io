@@ -67,7 +67,21 @@ h4, h5, h6 {
     width: 350px;
 }
 
-
+.img {
+    margin: 1em 0;
+}
+.img-xs {
+    width: 300px;
+}
+.img-sm {
+    width: 500px;
+}
+.img-md {
+    width: 690px;
+}
+.img-lg {
+    width: 800px;
+}
 
 
 

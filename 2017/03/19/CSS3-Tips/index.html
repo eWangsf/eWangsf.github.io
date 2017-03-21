@@ -8,7 +8,7 @@
 <!--<![endif]-->
 
 <head>
-    <title>Archives | eWangsf</title>
+    <title>CSS3-Tips | eWangsf</title>
     <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -144,77 +144,69 @@
 <!-- ============================ END #sb-site Main Page Wrapper =========================== -->
 
       
-
-
-
-<section id="services">
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/11/20/LeetCode笔记-RomanToInteger/">LeetCode笔记-Roman&lt;--&gt;Integer</a></h4>
-                            
-                            <p><time datetime="2016-11-19T16:16:13.000Z"><a href="/2016/11/20/LeetCode笔记-RomanToInteger/">2016-11-20</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/11/16/LeetCode笔记-PalindromeNumber/">LeetCode笔记-PalindromeNumber</a></h4>
-                            
-                            <p><time datetime="2016-11-16T07:20:34.000Z"><a href="/2016/11/16/LeetCode笔记-PalindromeNumber/">2016-11-16</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/11/15/points/">points</a></h4>
-                            
-                            <p><time datetime="2016-11-15T08:56:15.000Z"><a href="/2016/11/15/points/">2016-11-15</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/11/10/面筋/">面筋</a></h4>
-                            
-                            <p><time datetime="2016-11-10T02:53:37.000Z"><a href="/2016/11/10/面筋/">2016-11-10</a></time></p>
-                        </div>
-                    
-                        
-                            </div><div class="row boxes">
-                            
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/10/26/svg-sprite/">svg-sprite</a></h4>
-                            
-                            <p><time datetime="2016-10-26T13:59:29.000Z"><a href="/2016/10/26/svg-sprite/">2016-10-26</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+    <time datetime="2017-03-19T11:20:44.000Z" itemprop="datePublished">
+        2017-03-19
+    </time>
+    
+        
+        | 
+            <a href='/tags/tips/'>tips</a>
+            
+        
+    
+</span>
+                <h1>CSS3-Tips</h1>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2 articlecontent">
+      		<h2 id="伪类和伪元素"><a href="#伪类和伪元素" class="headerlink" title="伪类和伪元素"></a>伪类和伪元素</h2><ul>
+<li><p>伪类：<br>  :link, :visited, :hover, :active(LVHA), :focus, :first-child, :nth-child, :nth-last-child, :nth-of-type, :first-of-type, :last-of-type, :empty, :target, :checked, :enabled, :disabled,  </p>
+</li>
+<li><p>特别：</p>
+<ul>
+<li>:first-child表示父元素的第一个子元素</li>
+<li>:first-of-type表示在父容器内(直接父元素)其所有种类元素的第一个元素（所有第一次出现的都会被选中， 比如第一个 li 和第一个 span ）</li>
+<li>:last-of-type同理</li>
+<li>:last-child表示父元素的最后一个子元素</li>
+<li>:nth-child(an+b / odd / even)，从 1 开始数</li>
+<li>:nth-last-child()同理</li>
+<li>:nth-of-type指的是某个选择器选中的那些中的 index，比如 p:nth-of-type(1) 就表示在父元素中第一次出现的p元素，哪怕这个 p 之前有其它标签也会被选中。</li>
+<li>:nth-last-of-type同理</li>
+<li>:only-child选中只有一个孩子的父元素</li>
+<li>:only-of-type作用更 only-child 一样，只是可读性更强</li>
+<li>:target表示当 window.location.hash == id 时，具备该 id 的元素将被选中<br>  如：div:target {background-color: red;} 而该 div 的 id 为 section, 那么当 url 中的 hash 为 #section 时，该 div 背景将变红</li>
+<li>表单：<br>  :default选择一组相似元素中的默认元素，如 checkbox 或 radio 中的默认选中项<br>  :in-range/:out-of-range表示 number 类型的元素在定义的 min 和 max 值之间 / 之外<br>  :indeterminate表单元素中未确定状态的项，比如在文档加载的时候 document.getElementById(“#id”).indeterminate = true 的那些<br>  :valid / :invalid 表单通过验证 / 不通过<br>  :optional / :required表示未required<br>  :placeholder</li>
+</ul>
+</li>
+</ul>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>虽然还没想好写点什么，但是总觉得这里放句话比较和谐。</p>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
+        <nav class="pagination" role="pagination">
+    
+    
+    <a class="pull-right" href="/2017/03/14/js闭包总结/">
+        js闭包总结 →
+    </a>
+    
+</nav>
+
+        <!-- <div class="duoshuo">
+</div> -->
     </div>
 </section>
+
+
+
+
+
+
       
 <!-- ============================ Footer =========================== -->
 
