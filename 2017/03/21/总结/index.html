@@ -8,7 +8,7 @@
 <!--<![endif]-->
 
 <head>
-    <title>Tag: zaza | eWangsf</title>
+    <title>总结 | eWangsf</title>
     <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -144,77 +144,116 @@
 <!-- ============================ END #sb-site Main Page Wrapper =========================== -->
 
       
-
-
-
-<section id="services">
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2017/03/21/总结/">总结</a></h4>
-                            
-                            <p><time datetime="2017-03-21T13:58:12.000Z"><a href="/2017/03/21/总结/">2017-03-21</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2017/03/14/js闭包总结/">js闭包总结</a></h4>
-                            
-                            <p><time datetime="2017-03-14T01:59:17.000Z"><a href="/2017/03/14/js闭包总结/">2017-03-14</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2017/03/11/模块化/">模块化</a></h4>
-                            
-                            <p><time datetime="2017-03-11T06:06:45.000Z"><a href="/2017/03/11/模块化/">2017-03-11</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/12/26/sublimetext-packagecontrol/">sublimetext-packagecontrol</a></h4>
-                            
-                            <p><time datetime="2016-12-26T15:22:22.000Z"><a href="/2016/12/26/sublimetext-packagecontrol/">2016-12-26</a></time></p>
-                        </div>
-                    
-                        
-                            </div><div class="row boxes">
-                            
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/10/26/svg-sprite/">svg-sprite</a></h4>
-                            
-                            <p><time datetime="2016-10-26T13:59:29.000Z"><a href="/2016/10/26/svg-sprite/">2016-10-26</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+    <time datetime="2017-03-21T13:58:12.000Z" itemprop="datePublished">
+        2017-03-21
+    </time>
+    
+        
+        | 
+            <a href='/tags/zaza/'>zaza</a>
+            
+        
+    
+</span>
+                <h1>总结</h1>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2 articlecontent">
+      		<h2 id="flex篇"><a href="#flex篇" class="headerlink" title="flex篇"></a>flex篇</h2><ul>
+<li>父元素属性：<ul>
+<li>display: flex;</li>
+<li>flex-direction: row | row-reverse | column | column-reverse</li>
+<li>flex-wrap: nowrap | wrap | wrap-reverse(换行，第一行在最下面)</li>
+<li>flex-flow (flex-direction + flex-wrap)</li>
+<li>justify-content: flex-start | flex-end | center | space-between | space-around</li>
+<li>align-items: flex-start | flex-end | center | <span class="highlight">baseline</span> | <span class="highlight">stretch</span></li>
+<li>align-content: flex-start | flex-end | center | space-between | space-around | stretch</li>
+</ul>
+</li>
+<li><p>子元素属性</p>
+<ul>
+<li>order: <strong><em>integer</em></strong> (默认为0，越小越靠前)</li>
+<li>flex-grow: <strong><em>number</em></strong> (默认为0，即如果存在剩余空间，也不放大)</li>
+<li>flex-shrink: <strong><em>number</em></strong> (默认为1，即如果空间不足，项目将缩小)</li>
+<li>flex-basis: <strong><em>length</em></strong> | auto</li>
+<li>flex (flex-grow(0) + flex-shrink(1) + flex-basis(auto))</li>
+<li>align-self: auto(表示继承父元素的align-item值) | flex-start | flex-end | center | baseline | stretch</li>
+</ul>
+</li>
+<li><p><strong><em>参考</em></strong></p>
+<ul>
+<li><a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html" target="_blank" rel="external">Flex 布局教程：语法篇 - 阮一峰</a></li>
+<li><a href="https://jsfiddle.net/ewangsf/810xv8nk/6/" target="_blank" rel="external">flex 实现圣杯布局</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="Http状态码"><a href="#Http状态码" class="headerlink" title="Http状态码"></a>Http状态码</h2><ul>
+<li>1xx：请求已被接受，需要继续处理，表临时响应。只包含状态行和某些可选的响应头信息，并以空行结束。</li>
+<li>2xx: 代表请求成功被接收、理解、并接受。<ul>
+<li>200: 请求成功，所请求的数据体将随着响应返回。</li>
+<li>201: Created</li>
+<li>202: Accepted<br>  返回202状态码的响应的目的是允许服务器接受其他过程的请求（例如某个每天只执行一次的基于批处理的操作），而不必让客户端一直保持与服务器的连接直到批处理操作全部完成。</li>
+</ul>
+</li>
+<li>3xx: 代表客户端需要采取进一步的操作才能完成请求。<ul>
+<li>301: 永久资源移动。</li>
+<li>302: 临时重定向。</li>
+<li>304: Not Modified。不包含信息体，因此始终以消息头后的第一个空行结尾。</li>
+</ul>
+</li>
+<li>4xx: 客户端错误。<ul>
+<li>400: Bad Request。请求包含语法错误，若不修改不应该再次提交此请求。</li>
+<li>401: 需要用户验证。WWW-Authenticate请求头。</li>
+<li>403: Forbidden。服务器理解请求但是拒绝执行。</li>
+<li>404: Not Found。请求失败，请求所希望得到的资源未被在服务器上发现。</li>
+<li>405: Method Not Allowed。有些方法，如PUT, DELETE不被服务器允许。</li>
+<li>406: Not Acceptable。请求的资源内容特性无法满足请求头中的条件，因而无法生成响应实体。由Content-type: text/html(MIME-type)这种指定。<br>  mime-type: text/html, text/plane, image/jpeg, image/gif，。。。</li>
+<li>408: Request Timeout。请求超时。可以 xhr.timeout=2000, 也可以在 jquery 的 timeout 字段中设置。</li>
+<li>414: Request-URI Too Long。比如应该 post 的时候用了 get。</li>
+</ul>
+</li>
+<li>5xx: 服务器错误。<ul>
+<li>500: Internal Server Error。</li>
+<li>502: Bad Gateway。网关错误（作为网关或者代理工作的服务器尝试执行请求时，从上游服务器接收到无效的响应）。</li>
+<li>503: Service Unavailabel。由于临时的服务器维护或过载，服务器当前无法处理。</li>
+</ul>
+</li>
+<li><strong><em>参考</em></strong><ul>
+<li><a href="https://zh.wikipedia.org/wiki/HTTP状态码" target="_blank" rel="external">HTTP状态码 - wiki</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="HTTP-amp-HTTPS"><a href="#HTTP-amp-HTTPS" class="headerlink" title="HTTP &amp; HTTPS"></a>HTTP &amp; HTTPS</h2><ul>
+<li></li>
+</ul>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>虽然还没想好写点什么，但是总觉得这里放句话比较和谐。</p>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
+        <nav class="pagination" role="pagination">
+    
+    
+    <a class="pull-right" href="/2017/03/19/CSS3-Tips/">
+        CSS3-Tips →
+    </a>
+    
+</nav>
+
+        <!-- <div class="duoshuo">
+</div> -->
     </div>
 </section>
+
+
+
+
+
+
       
 <!-- ============================ Footer =========================== -->
 
