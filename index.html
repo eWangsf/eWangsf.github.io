@@ -177,6 +177,49 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
+                    <h3><a href="/2017/03/27/前端攻击总结/">js攻击总结</a></h3>
+                    <span>
+                        <span class="post-meta">
+    <time datetime="2017-03-27T12:54:16.000Z" itemprop="datePublished">
+        2017-03-27
+    </time>
+    
+        
+        | 
+            <a href='/tags/tips/'>tips</a>
+            
+        
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        CSRF / XSRF (Cross-site request forgery)跨站请求伪造。指的是攻击者通过向用户页面注入一段可以引起请求的代码，在用户未意识到的情况下请求某些网站的一种攻击。攻击原理如下：由图可见，要完成 CSRF 攻击，用户需完成两个步骤：
+
+访问受信任网站 A，在本地生成 cookie
+在 cookie 未过期之前访问危险网站 B
+
+对于用户来说，只要以上步骤有一个未发生就可避免攻击，但是，用户无法保证:
+
+在访
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2017/03/27/前端攻击总结/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
                     <h3><a href="/2017/03/21/总结/">总结</a></h3>
                     <span>
                         <span class="post-meta">
@@ -186,7 +229,7 @@
     
         
         | 
-            <a href='/tags/zaza/'>zaza</a>
+            <a href='/tags/tips/'>tips</a>
             
         
     
@@ -201,8 +244,8 @@
 display: flex;
 flex-direction: row | row-reverse | column | column-reverse
 flex-wrap: nowrap | wrap | wrap-reverse(换行，第一行在最下面)
-flex-flow (flex-direction + flex-wrap)
-justify-content: flex-start | flex-end | 
+flex-flow (flex-direction+flex-wrap`)
+justify-content: flex-start | flex-end | c
                       
                     </p>
                     
@@ -306,7 +349,7 @@ justify-content: flex-start | flex-end |
     
         
         | 
-            <a href='/tags/zaza/'>zaza</a>
+            <a href='/tags/tips/'>tips</a>
             
         
     
@@ -477,12 +520,14 @@ typeof用于判断数据类型， 可能的值有： “undefined”, “boolean
                       
                         httphttp 是一种基于 tcp 协议的应用层协议
 http协议的缺点
-通信使用明文（不加密），内容可能被窃听
+通信使用明文（不加密），内容可能被窃听  当用户在同一个局域网内时，可以很方便地通过抓包工具等获取其他用户发送的请求包，而请求包内的数据都是明文的状态，用户的机密信息（如登录信息等）很容易泄露。
 不验证通信方身份，可能遭遇伪装
+
 无法验证报文完整性，有可能遭篡改
 
+
 HTTP + 加密 + 认证 + 完整性保护 = HTTPS
-httpsHTTPS (Hyper Text Transfer Protocol Secure) 在 tcp 和 http 之间增加了一层 SSL / TSL 协议，使得 http 包在被 tc
+httpsHTTPS (Hyper
                       
                     </p>
                     
@@ -530,46 +575,6 @@ CSS布局奇技淫巧：宽度自适应
                     
                     <p class="pull-right readMore">
                         <a href="/2017/02/14/奇技淫巧-css/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2016/12/26/sublimetext-packagecontrol/">sublimetext-packagecontrol</a></h3>
-                    <span>
-                        <span class="post-meta">
-    <time datetime="2016-12-26T15:22:22.000Z" itemprop="datePublished">
-        2016-12-26
-    </time>
-    
-        
-        | 
-            <a href='/tags/zaza/'>zaza</a>
-            
-        
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        Sublime Text3 之 Package ControlSublime Text没啥好介绍的了，反正大家都是人手一个的，这个文主要想记录一下在使用sublimetext过程中遇到的一些坑，解决方案，好用的sublime text3的插件以及杂杂的一些个人tip，反正很杂就对了。
-
-no-package-availabel&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-
-看到的时候
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2016/12/26/sublimetext-packagecontrol/">Read More...</a>
                     </p>
                     
                 </div>
