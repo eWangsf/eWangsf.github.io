@@ -167,15 +167,38 @@
       		<h2 id="http"><a href="#http" class="headerlink" title="http"></a>http</h2><p>http 是一种基于 tcp 协议的应用层协议</p>
 <h4 id="http协议的缺点"><a href="#http协议的缺点" class="headerlink" title="http协议的缺点"></a>http协议的缺点</h4><ul>
 <li>通信使用明文（不加密），内容可能被窃听<br>  当用户在同一个局域网内时，可以很方便地通过抓包工具等获取其他用户发送的请求包，而请求包内的数据都是明文的状态，用户的机密信息（如登录信息等）很容易泄露。</li>
-<li><p>不验证通信方身份，可能遭遇伪装</p>
-</li>
-<li><p>无法验证报文完整性，有可能遭篡改</p>
-</li>
+<li>不验证通信方身份，可能遭遇伪装</li>
+<li>无法验证报文完整性，有可能遭篡改</li>
 </ul>
 <p><span class="tips">HTTP + 加密 + 认证 + 完整性保护 = HTTPS</span></p>
-<h2 id="https"><a href="#https" class="headerlink" title="https"></a>https</h2><p>HTTPS (Hyper Text Transfer Protocol Secure) 在 tcp 和 http 之间增加了一层 SSL / TSL 协议，使得 http 包在被 tcp 封装之前先使用 SSL / TSL 封装了一遍，支持了加密、证书和完整性验证。</p>
+<hr>
+<h2 id="https"><a href="#https" class="headerlink" title="https"></a>https</h2><p>HTTPS (Hyper Text Transfer Protocol Secure) 在 tcp 和 http 之间增加了一层 SSL / TSL 协议，使得 http 包在被 tcp 封装之前先使用 SSL / TSL 封装了一遍，支持了加密、证书和完整性验证。<br>HTTPS 与 HTTP 协议不同，其流量承载在 443 端口。</p>
+<h4 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h4><ul>
+<li>当客户端使用 https 访问 web server 时，他会对客户端出示一个证书，其中包括<ul>
+<li>证书的发布机构 CA</li>
+<li>证书的有效期</li>
+<li>公钥</li>
+<li>证书所有者</li>
+<li>签名</li>
+</ul>
+</li>
+<li>客户端收到证书后检测证书的有效性：<ul>
+<li>浏览器校验证书中的证书所有者、有效期</li>
+<li>浏览器查找操作系统中内置的受信任的证书颁发机构 CA，验证证书是否为合法机构颁发</li>
+<li>如果验证成功，则浏览器从操作系统中取出颁发者 CA 的公钥，对服务器发来的签名进行解密</li>
+<li>浏览器使用相同的 hash 算法计算服务器发来的证书的 hash 值，将计算得到的值与证书的签名部分比较</li>
+</ul>
+</li>
+<li>如果验证通过，客户端产生一个随机值作为通信密钥，用收到的公钥加密后发给服务端</li>
+<li>服务端收到客户端密钥后用仅自己知道的私钥解密，这样客户端和服务端就共享了一对密钥，后续的通信过程可以使用这个共享密钥进行加密和解密（对称密钥加密技术）</li>
+</ul>
+<p><span class="highlight">之所以要产生对称密钥而不是直接使用公钥私钥通信是因为对称密钥加密技术的计算更快。</span></p>
+<hr>
+<p><strong><em>参考</em></strong></p>
 <ul>
-<li>加密<br>  http</li>
+<li><a href="http://support.upyun.com/hc/kb/article/1031843/?comefrom=http://blogread.cn/news/" target="_blank" rel="external">HTTPS 原理详解</a></li>
+<li><a href="https://www.zhihu.com/question/19577317" target="_blank" rel="external">http 和 https 有何区别？如何灵活使用？ - 知乎</a></li>
+<li><a href="http://enml.github.io/site/2014/05/27/HTTP-secure/" target="_blank" rel="external">HTTP协议安全</a></li>
 </ul>
 
             <div class="clearfix"></div>
