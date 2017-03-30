@@ -193,6 +193,12 @@
 <li>服务端收到客户端密钥后用仅自己知道的私钥解密，这样客户端和服务端就共享了一对密钥，后续的通信过程可以使用这个共享密钥进行加密和解密（对称密钥加密技术）</li>
 </ul>
 <p><span class="highlight">之所以要产生对称密钥而不是直接使用公钥私钥通信是因为对称密钥加密技术的计算更快。</span></p>
+<h4 id="HTTPS缺点"><a href="#HTTPS缺点" class="headerlink" title="HTTPS缺点"></a>HTTPS缺点</h4><ul>
+<li>SSL 费用高，而且在服务器上的部署、维护、更新都很麻烦</li>
+<li>HTTPS 降低了用户访问速度（多次握手）</li>
+<li>网站开启 HTTPS 后，从 HTTP 跳转到 HTTPS 的方式增加了用户访问耗时（大多使用 302 跳转）</li>
+<li>HTTPS 涉及到的加解密过程会消耗 CPU 资源，因此需要新增机器  </li>
+</ul>
 <hr>
 <p><strong><em>参考</em></strong></p>
 <ul>
