@@ -164,12 +164,18 @@
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2 articlecontent">
-      		<h2 id="flex篇"><a href="#flex篇" class="headerlink" title="flex篇"></a>flex篇</h2><ul>
+      		<h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><ul>
+<li><a href="#flex篇">flex篇</a></li>
+<li><a href="#http状态码">http状态码</a></li>
+<li><a href="#cookie">cookie</a></li>
+</ul>
+<hr>
+<h2 id="flex篇"><a href="#flex篇" class="headerlink" title="flex篇"></a>flex篇</h2><ul>
 <li>父元素属性：<ul>
 <li><code>display</code>: flex;</li>
 <li><code>flex-direction</code>: row | row-reverse | column | column-reverse</li>
 <li><code>flex-wrap</code>: nowrap | wrap | wrap-reverse(换行，第一行在最下面)</li>
-<li><code>flex-flow (</code>flex-direction<code>+</code>flex-wrap`)</li>
+<li><code>flex-flow</code> (<code>flex-direction</code> + <code>flex-wrap</code>)</li>
 <li><code>justify-content</code>: flex-start | flex-end | center | space-between | space-around</li>
 <li><code>align-items</code>: flex-start | flex-end | center | <span class="highlight">baseline</span> | <span class="highlight">stretch</span></li>
 <li><code>align-content</code>: flex-start | flex-end | center | space-between | space-around | stretch</li>
@@ -192,7 +198,8 @@
 </ul>
 </li>
 </ul>
-<h2 id="Http状态码"><a href="#Http状态码" class="headerlink" title="Http状态码"></a>Http状态码</h2><ul>
+<hr>
+<h2 id="http状态码"><a href="#http状态码" class="headerlink" title="http状态码"></a>http状态码</h2><ul>
 <li><code>1xx</code>：请求已被接受，需要继续处理，表临时响应。只包含状态行和某些可选的响应头信息，并以空行结束。</li>
 <li><code>2xx</code>: 代表请求成功被接收、理解、并接受。<ul>
 <li><code>200</code>: 请求成功，所请求的数据体将随着响应返回。</li>
@@ -225,6 +232,42 @@
 </li>
 <li><strong><em>参考</em></strong><ul>
 <li><a href="https://zh.wikipedia.org/wiki/HTTP状态码" target="_blank" rel="external">HTTP状态码 - wiki</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h2><p>cookie 就是浏览器储存在用户电脑上的一小段文本文件。用于维持访问状态，比如在用户登录后服务器在本地设置下username和password表示下当前用户已登录。</p>
+<ol>
+<li>创建<br> <code>Set-Cookie</code>: Set-Cookie: value[; expires=date][; domain=domain][; path=path][; secure]<ul>
+<li>服务器通过发送这个给客户端来创建一个 cookie, 后续客户端的请求带上的只会是 value 部分而不包括设置选项。</li>
+<li>expires 若为空，则表示 cookie 的生命周期仅限于当前会话中。<span class="highlight">时间以浏览器运行的电脑上的时间为基准，注意浏览器和客户端的时间差异问题</span></li>
+<li>domain 默认为创建 cookie 的页面的域名，默认是当前页面的 host（不包括子域）， 但是可以扩展发送场景，比如如果设置为<code>yahoo.com</code>则<code>my.yahoo.com</code>、<code>finance.yahoo.com</code>等请求的时候也会带上这个cookie，但是 domain 值必须是 request url 中的一部分，不能在 A.baidu.com 中设置 domain 为 google.com</li>
+<li>path 与 domain 类似，是在 domain 条件符合的条件下再符合某种路径规则的设置。 若 path 为 /blog 则以 /blog、 /blogsome 这类开始的路径上的请求都会被带上 cookie</li>
+<li>secure 只有当请求通过 SSL 或 HTTPS 创建时，包含 secure 选项的 cookie 才会被发送</li>
+<li><span class="highlight">HttpOnly：cookie 无法通过 document.cookie 被获取，针对 XSS 攻击</span></li>
+</ul>
+</li>
+<li>维护<ul>
+<li><span class="tips">多个 cookie 的排序依照 domain-path-secure 的顺序，设置越详细的 cookie 越靠前</span></li>
+</ul>
+</li>
+<li>删除<ul>
+<li>session cookie(expires值为空)在会话结束时（浏览器关闭）被删除</li>
+<li>设置了 expires 值的会在到期时被删除</li>
+<li>如果浏览器的 cookie 数量达到限制，则会删除某些 cookie 为新 cookie 腾出空间。<br>参考<a href="https://www.nczonline.net/blog/2008/05/17/browser-cookie-restrictions/" target="_blank" rel="external">cookies restrictions</a></li>
+</ul>
+</li>
+<li>限制<ul>
+<li>cookie 属性限制：某些浏览器限制每个域名下的 cookie 数量不超过 50 个(chrome 未限制)</li>
+<li>总大小限制： 发向服务器的所有 cookie 的最大空间不超过 4KB</li>
+</ul>
+</li>
+<li>js 中的 cookie</li>
+</ol>
+<ul>
+<li><strong><em>参考</em></strong><ul>
+<li><a href="http://bubkoo.com/2014/04/21/http-cookies-explained/" target="_blank" rel="external">HTTP cookies 详解</a></li>
+<li><a href="https://www.tianmaying.com/tutorial/cookie-session" target="_blank" rel="external">Cookie/Session的机制与安全</a></li>
 </ul>
 </li>
 </ul>
