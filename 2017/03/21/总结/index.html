@@ -168,6 +168,7 @@
 <li><a href="#flex篇">flex篇</a></li>
 <li><a href="#http状态码">http状态码</a></li>
 <li><a href="#cookie">cookie</a></li>
+<li><a href="#浏览器缓存">浏览器缓存</a></li>
 </ul>
 <hr>
 <h2 id="flex篇"><a href="#flex篇" class="headerlink" title="flex篇"></a>flex篇</h2><ul>
@@ -241,7 +242,7 @@
 <li>创建<br> <code>Set-Cookie</code>: Set-Cookie: value[; expires=date][; domain=domain][; path=path][; secure]<ul>
 <li>服务器通过发送这个给客户端来创建一个 cookie, 后续客户端的请求带上的只会是 value 部分而不包括设置选项。</li>
 <li>expires 若为空，则表示 cookie 的生命周期仅限于当前会话中。<span class="highlight">时间以浏览器运行的电脑上的时间为基准，注意浏览器和客户端的时间差异问题</span></li>
-<li>domain 默认为创建 cookie 的页面的域名，默认是当前页面的 host（不包括子域）， 但是可以扩展发送场景，比如如果设置为<code>yahoo.com</code>则<code>my.yahoo.com</code>、<code>finance.yahoo.com</code>等请求的时候也会带上这个cookie，但是 domain 值必须是 request url 中的一部分，不能在 A.baidu.com 中设置 domain 为 google.com</li>
+<li>domain 默认为创建 cookie 的页面的域名，默认是当前页面的 host（不包括子域）， 但是可以扩展发送场景，比如如果设置为<code>.yahoo.com</code>则<code>my.yahoo.com</code>、<code>finance.yahoo.com</code>等请求的时候也会带上这个cookie，但是 domain 值必须是 request url 中的一部分，不能在 A.baidu.com 中设置 domain 为 google.com</li>
 <li>path 与 domain 类似，是在 domain 条件符合的条件下再符合某种路径规则的设置。 若 path 为 /blog 则以 /blog、 /blogsome 这类开始的路径上的请求都会被带上 cookie</li>
 <li>secure 只有当请求通过 SSL 或 HTTPS 创建时，包含 secure 选项的 cookie 才会被发送</li>
 <li><span class="highlight">HttpOnly：cookie 无法通过 document.cookie 被获取，针对 XSS 攻击</span></li>
@@ -270,6 +271,35 @@
 <li><strong><em>参考</em></strong><ul>
 <li><a href="http://bubkoo.com/2014/04/21/http-cookies-explained/" target="_blank" rel="external">HTTP cookies 详解</a></li>
 <li><a href="https://www.tianmaying.com/tutorial/cookie-session" target="_blank" rel="external">Cookie/Session的机制与安全</a></li>
+<li><a href="http://www.infoq.com/cn/articles/cookie-security" target="_blank" rel="external">Cookie安全漫谈 - InfoQ</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="浏览器缓存"><a href="#浏览器缓存" class="headerlink" title="浏览器缓存"></a>浏览器缓存</h2><ol>
+<li><p>与缓存相关的 http 头<br> <code>Cache-Control</code>: max-age / s-maxage / public / private / no-cache / no-store / must-revalidate</p>
+<ul>
+<li>max-age(s) / s-maxage(s)：表示缓存存储的最大周期，超过这个时间缓存被认为过期，优先级高于 expires。 s-maxage（在private模式下不生效） &gt; max-age</li>
+<li>public(默认值) / private：前者表示可以被任何类型的机器缓存，后者表示不能作为共享缓存（即代理服务器不能缓存它）</li>
+<li>no-cache：强制所有缓存了该响应的缓存用户，在使用已存储的缓存数据前，发送带验证器的请求到原始服务器</li>
+<li>no-store：每次请求都需要从服务器重新获取</li>
+</ul>
+<p><code>ETag</code>：如果文件缓存过期了，浏览器在 If-None-Match 头中带上 tag 值，如果服务器端的文件并未改变，将会返回 304 响应，跳过重新下载的过程<br><code>If-None-Match</code><br><code>Expires</code><br><code>Last-Modified</code><br><code>If-Modified-Since</code></p>
+</li>
+<li><p>与缓存相关的一些概念</p>
+<ul>
+<li>Cache-Control 是设置浏览器端的缓存状态的</li>
+<li>Expires 使用的是服务端的时间，也就是说 Expires = max-age + 请求时间</li>
+<li>ETag 可以弥补 Last-Modified 只能精确到秒的缺点</li>
+</ul>
+</li>
+<li>缓存的使用流程 <div class="flex"><br>     <a href="浏览器缓存1.png"><img src="浏览器缓存1.png" class="img img-xs" alt="浏览器缓存1"></a><br>     <a href="浏览器缓存2.png"><img src="浏览器缓存2.png" class="img img-xs" alt="浏览器缓存2"></a><br> </div>
+</li>
+</ol>
+<ul>
+<li><strong><em>参考</em></strong><ul>
+<li><a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching?hl=zh-cn" target="_blank" rel="external">HTTP 缓存 <span class="tips">干货！！！！</span> </a></li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Cache-Control" target="_blank" rel="external">Cache-Control - MDN</a></li>
+<li><a href="https://segmentfault.com/a/1190000008377508" target="_blank" rel="external">浏览器缓存</a></li>
 </ul>
 </li>
 </ul>
