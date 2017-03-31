@@ -258,11 +258,13 @@
 </ul>
 </li>
 <li>限制<ul>
-<li>cookie 属性限制：某些浏览器限制每个域名下的 cookie 数量不超过 50 个(chrome 未限制)</li>
-<li>总大小限制： 发向服务器的所有 cookie 的最大空间不超过 4KB</li>
+<li>UserAgent 至少应支持 300 项 cookie，每项至少应支持到 4KB，每个域名至少支持 20 项 cookie</li>
 </ul>
 </li>
-<li>js 中的 cookie</li>
+<li>cookie 安全<ul>
+<li>cookie 中的信息很容易被获取，不适合存放敏感数据，cookie 中一般存放一个session id, session 则存放在服务端</li>
+</ul>
+</li>
 </ol>
 <ul>
 <li><strong><em>参考</em></strong><ul>
