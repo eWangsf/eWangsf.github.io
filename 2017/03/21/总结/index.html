@@ -298,8 +298,97 @@
 <ul>
 <li><strong><em>参考</em></strong><ul>
 <li><a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching?hl=zh-cn" target="_blank" rel="external">HTTP 缓存 <span class="tips">干货！！！！</span> </a></li>
+<li><a href="http://web.jobbole.com/86970/" target="_blank" rel="external">浅谈浏览器http的缓存机制</a></li>
 <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Cache-Control" target="_blank" rel="external">Cache-Control - MDN</a></li>
 <li><a href="https://segmentfault.com/a/1190000008377508" target="_blank" rel="external">浏览器缓存</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="ES6中的this"><a href="#ES6中的this" class="headerlink" title="ES6中的this"></a>ES6中的this</h2><ul>
+<li><strong>*参考</strong><ul>
+<li><a href="http://www.cnblogs.com/vajoy/p/4902935.html" target="_blank" rel="external">ES6 箭头函数中的 this？你可能想多了（翻译）</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="计算机网络"><a href="#计算机网络" class="headerlink" title="计算机网络"></a>计算机网络</h2><ul>
+<li>地址划分<ul>
+<li><img src="计网-地址划分.png" class="img img-sm" alt=""></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong><em>DOM总结</em></strong></p>
+<ul>
+<li>创建<ul>
+<li>createElement()</li>
+<li>createAttribute()</li>
+<li>createTextNode()</li>
+<li>cloneNode(deep): deep为true表示克隆后代</li>
+<li>createDocumentFragment()</li>
+</ul>
+</li>
+<li>读写<ul>
+<li>getElementById()</li>
+<li>getElementsByTagName()</li>
+<li>getElementsByClassName()</li>
+<li>appendChild()</li>
+<li>insertBefore(): parent.insertBefore(待插入元素, 参照元素);</li>
+<li>replaceChild(): parent.replaceChild(new, old)</li>
+<li>getAttribute()</li>
+<li>setAttribute()</li>
+<li>hasAttribute()</li>
+<li>hasAttributes()</li>
+<li>hasChildNodes()</li>
+</ul>
+</li>
+<li><p>删除</p>
+<ul>
+<li>removeChild()</li>
+<li>removeAttribute()</li>
+</ul>
+</li>
+<li><p>遍历</p>
+<ul>
+<li>childNodes</li>
+<li>parentNode</li>
+<li>nextSibling</li>
+<li>previousSibling</li>
+<li>firstChild</li>
+<li>lastChild</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong><em>URL输入后发生了什么</em></strong></p>
+<ul>
+<li><a href="https://mp.weixin.qq.com/s?__biz=MjM5MzA0OTkwMA==&amp;mid=208656450&amp;idx=1&amp;sn=a0acacc55ce9176b30c2a284f5e85aed#rd" target="_blank" rel="external">当你输入一个网址，实际会发生什么?</a></li>
+<li><a href="https://www.zybuluo.com/yangfch3/note/113028" target="_blank" rel="external">输入网址之后发生了什么</a></li>
+</ul>
+</li>
+<li><p><strong><em>position:absolute/fix的时候发生了什么</em></strong></p>
+<ul>
+<li>把该元素往z轴方向移动一层，元素脱离了普通流，所以不在占据原来那层的空间，还会覆盖下层的元素。</li>
+<li>该元素将变为块级元素，相当于给该元素设置了display:block（内联元素设置了absolute之后就可以设置宽高了）</li>
+<li>如果该元素的块级元素，元素的宽度从原来的width:100%变为auto</li>
+</ul>
+</li>
+<li><p><strong><em>float之后发生了什么</em></strong></p>
+<ul>
+<li>只有左右浮动，没有上下浮动</li>
+<li>float后，脱离文档流，不再占据原来那层的空间，还会覆盖下一层的元素</li>
+<li>不会对该元素的上一个兄弟元素有任何影响</li>
+<li>该元素的下一个兄弟元素会紧贴到该元素之前没有设置float的元素之后</li>
+<li>如果该元素的下一个兄弟元素中有内联元素，则会围绕该元素显示</li>
+<li>下一个兄弟元素如果也设置了同一方向的float,则会紧随该元素之后显示</li>
+</ul>
+</li>
+<li><p><strong><em>bind的实现（浏览器兼容bind)</em></strong></p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">Function.prototype.bind = Function.prototype.bind || function(context) &#123;</div><div class="line">    var self = this;</div><div class="line">    return function() &#123;</div><div class="line">        return self.apply(context, arguments);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong><em>原型与继承</em></strong></p>
+<ul>
+<li><a href="https://zhuanlan.zhihu.com/p/22989691" target="_blank" rel="external">JavaScript 世界万物诞生记</a></li>
+<li><a href="https://www.zhihu.com/question/34183746" target="_blank" rel="external">js中<strong>proto</strong>和prototype的区别和关系？ - doris的回答</a></li>
 </ul>
 </li>
 </ul>

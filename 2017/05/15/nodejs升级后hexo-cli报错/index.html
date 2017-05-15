@@ -8,7 +8,7 @@
 <!--<![endif]-->
 
 <head>
-    <title>面筋 | eWangsf</title>
+    <title>nodejs升级后hexo-cli报错 | eWangsf</title>
     <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -149,66 +149,44 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-    <time datetime="2016-11-10T02:53:37.000Z" itemprop="datePublished">
-        2016-11-10
+    <time datetime="2017-05-15T11:17:37.000Z" itemprop="datePublished">
+        2017-05-15
     </time>
     
         
         | 
-            <a href='/tags/work/'>work</a>
+            <a href='/tags/zaza/'>zaza</a>
             
         
     
 </span>
-                <h1>面筋</h1>
+                <h1>nodejs升级后hexo-cli报错</h1>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2 articlecontent">
-      		<h2 id="简历"><a href="#简历" class="headerlink" title="简历"></a>简历</h2><ul>
-<li><a href="http://mp.weixin.qq.com/s?__biz=MjM5Njk5NTc1Ng==&amp;mid=2650071507&amp;idx=1&amp;sn=ab0c862cfb149545726738ad423e09a7&amp;chksm=bee0f61089977f066a33ebf65201f6316e41b0f7880e50ee56fbe6a7b511b55ce2f7f8335239&amp;scene=0#rd" target="_blank" rel="external">简历参考 - 非技术岗</a></li>
+      		<h2 id="出bug了"><a href="#出bug了" class="headerlink" title="出bug了"></a>出bug了</h2><p>以前用的node是v6.3.0的，hexo运行的好好，前段时间项目需要就更新了node，结果！刚刚<code>hexo server</code>就报了一堆错：</p>
+<ul>
+<li><img src="报错.png" class="img img-sm" alt=""></li>
 </ul>
-<hr>
-<h2 id="面试"><a href="#面试" class="headerlink" title="面试"></a>面试</h2><ul>
-<li>有道云</li>
-<li><a href="http://ourjs.com/detail/570c4bf788feaf2d031d24c9" target="_blank" rel="external">前端开发面试题</a></li>
-<li><a href="www.jackpu.com/qian-duan-mian-shi-zhong-de-chang-jian-de-suan-fa-wen-ti/">前端面试中的常见的算法问题</a></li>
-<li><a href="https://segmentfault.com/p/1210000008694240/read" target="_blank" rel="external">前端工作开发面试题集锦</a></li>
-<li><a href="http://www.qdfuns.com/notes/27377/635f072c77d0e5c4c712fe67bca93e0d.html" target="_blank" rel="external">记腾讯一次糟糕的笔试面试经历</a></li>
-<li><a href="http://web.jobbole.com/90654/" target="_blank" rel="external">一道面试题引发的对 javascript 类型转换的思考</a></li>
-<li><a href="http://www.jianshu.com/p/cd3fee40ef59" target="_blank" rel="external">前端基础进阶系列</a></li>
-<li><a href="https://segmentfault.com/a/1190000002627927?utm_source=Weibo" target="_blank" rel="external">我是如何同时拿到阿里和腾讯offer的 - segmentfault</a></li>
-<li><a href="http://web.jobbole.com/84723/" target="_blank" rel="external">你应该知道的25道Javascript面试题</a></li>
-<li><a href="http://bbs.html5cn.org/thread-149895-1-1.html" target="_blank" rel="external">[笔记] 阿里前端笔试总结</a></li>
-<li><a href="http://www.cnblogs.com/LoveOrHate/p/4457010.html" target="_blank" rel="external">2015某大型电商集团的前端实习生在线笔试</a></li>
-<li><a href="http://www.cnblogs.com/fingerpass/p/interview-myself-in-half-a-year.html" target="_blank" rel="external">fingerpass</a></li>
-<li><a href="前端工作面试问题（上）">linux 公社</a></li>
-<li><a href="http://caibaojian.com/javascript-this.html" target="_blank" rel="external">JavaScript this几道面试题及介绍</a></li>
-<li><a href="http://www.jianshu.com/p/0f838f4ff39d" target="_blank" rel="external">一次完整的HTTP事务是怎样一个过程？</a></li>
-<li><a href="http://www.infoq.com/cn/articles/browser-resource-loading-optimization" target="_blank" rel="external">让我们再聊聊浏览器资源加载优化</a></li>
-<li><a href="https://segmentfault.com/a/1190000004292479?utm_source=Weibo&amp;utm_medium=shareLink&amp;utm_campaign=socialShare" target="_blank" rel="external">JS 一定要放在 Body 的最底部么？聊聊浏览器的渲染机制</a></li>
-<li><a href="http://www.kuqin.com/shuoit/20151229/349685.html" target="_blank" rel="external">酷勤</a></li>
+<p>然后啥都没想一通乱<code>npm rebuild</code>、<code>npm update</code>、<code>npm cache clean</code>，并没什么用<br>把错误信息丢到google之后出来的<a href="https://github.com/hexojs/hexo/issues/1939" target="_blank" rel="external">issue</a>也是各种无法解决，也有<a href="https://idisfkj.github.io/2016/08/29/hexo%E4%BD%BF%E7%94%A8%E6%96%B0node%E7%89%88%E6%9C%AC%E9%97%AE%E9%A2%98/" target="_blank" rel="external">解决方法</a>,不过是nodejs降级，然后本来想放弃的我！瞄了一眼错误信息！<br>ヾ(｡｀Д´｡) 这！不是hexo-cli的问题吗，本着程序员的基本觉悟（重装试试？<br>然后</p>
+<ul>
+<li><img src="成功.png" class="img img-sm" alt=""></li>
 </ul>
-<hr>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ul>
-<li><a href="http://weibo.com/p/1001603825361573029939" target="_blank" rel="external">找实习八大技巧，你真的了解吗？- 苏莹子</a></li>
-<li><a href="http://weibo.com/p/1001603808384657824461" target="_blank" rel="external">《Effective A》- 苏莹子</a></li>
-<li>[分享一点“关于应届生如何写简历”的人生经验 - 朴灵] (<a href="http://weibo.com/ttarticle/p/show?id=2309404080297791597267" target="_blank" rel="external">http://weibo.com/ttarticle/p/show?id=2309404080297791597267</a>)</li>
-<li><a href="http://blog.jobbole.com/78229/" target="_blank" rel="external">伯乐在线</a></li>
-<li><a href="http://www.w3cplus.com/css/write-to-front-end-developer-interview.html" target="_blank" rel="external">写给前端面试者 - w3c</a></li>
+<h2 id="修复步骤"><a href="#修复步骤" class="headerlink" title="修复步骤"></a>修复步骤</h2><ul>
+<li><code>npm cache clean</code></li>
+<li><code>npm install hexo-cli -g</code>(装完后<code>hexo -v</code>可以看到hexo-cli升级了)<br>  <img src="升级.png" class="img img-xs" alt=""></li>
+<li><code>npm rebuild</code></li>
 </ul>
+<p>（强迫症表示心情好好:D</p>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="pagination" role="pagination">
     
-    <a class="pull-left" href="/2016/11/15/points/" style="float: left;">
-        ← points
-    </a>
     
-    
-    <a class="pull-right" href="/2016/10/26/svg-sprite/">
-        svg-sprite →
+    <a class="pull-right" href="/2017/03/27/前端攻击总结/">
+        js攻击总结 →
     </a>
     
 </nav>
